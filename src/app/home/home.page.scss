@@ -1,0 +1,176 @@
+ion-content {
+  --background: #f7f9fc;
+  color: #0f172a;
+}
+
+ion-toolbar {
+  --background: #ffffff;
+  --border-color: #e2e8f0;
+  --color: #0f172a;
+}
+
+.page-shell {
+  color: #0f172a;
+  margin: 0 auto;
+  max-width: 860px;
+  padding: 20px 16px 32px;
+}
+
+.overview {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  box-shadow: 0 16px 40px rgba(15, 23, 42, 0.08);
+  display: grid;
+  gap: 20px;
+  grid-template-columns: minmax(0, 1fr) 260px;
+  padding: 24px;
+}
+
+.overview,
+.metrics article,
+ion-card,
+ion-card-content {
+  color: #0f172a;
+}
+
+.overview__copy {
+  align-self: center;
+}
+
+.overview h1 {
+  font-size: 2rem;
+  line-height: 1.15;
+  margin: 16px 0 12px;
+}
+
+.overview p,
+ion-card p {
+  color: #475569;
+  line-height: 1.5;
+  margin: 0;
+}
+
+.overview p {
+  max-width: 540px;
+}
+
+.current-card {
+  background: linear-gradient(145deg, #0f766e, #0284c7);
+  border-radius: 8px;
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  min-height: 190px;
+  padding: 20px;
+}
+
+.current-card strong {
+  color: #ffffff;
+  font-size: 1.35rem;
+  line-height: 1.2;
+}
+
+.current-card__label,
+.current-card p {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.current-card__label {
+  font-size: 0.82rem;
+  margin-bottom: auto;
+}
+
+.current-card p {
+  margin-top: 10px;
+}
+
+.metrics {
+  display: grid;
+  gap: 12px;
+  grid-template-columns: repeat(3, 1fr);
+  margin: 16px 0 28px;
+}
+
+.metrics article,
+ion-card {
+  --background: #ffffff;
+  --color: #0f172a;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+}
+
+.metrics article {
+  display: grid;
+  gap: 6px;
+  padding: 16px;
+}
+
+.metrics span,
+.section-heading span {
+  color: #64748b;
+  font-size: 0.82rem;
+}
+
+.locations {
+  display: grid;
+  gap: 12px;
+}
+
+.section-heading span {
+  color: #0f766e;
+  font-weight: 700;
+}
+
+.section-heading h2 {
+  color: #0f172a;
+  font-size: 1.35rem;
+  line-height: 1.2;
+  margin: 6px 0 0;
+}
+
+ion-card {
+  box-shadow: none;
+  margin: 0;
+}
+
+ion-card-content {
+  padding: 18px;
+}
+
+.location-card__state {
+  color: #0f766e;
+  font-size: 0.78rem;
+  font-weight: 700;
+}
+
+ion-card h3 {
+  color: #0f172a;
+  font-size: 1.1rem;
+  margin: 6px 0 6px;
+}
+
+@media (max-width: 640px) {
+  .page-shell {
+    padding-top: 14px;
+  }
+
+  .overview {
+    grid-template-columns: 1fr;
+    padding: 20px;
+  }
+
+  .overview h1 {
+    font-size: 1.65rem;
+  }
+
+  .current-card {
+    min-height: 150px;
+  }
+
+  .metrics {
+    grid-template-columns: 1fr;
+  }
+}
