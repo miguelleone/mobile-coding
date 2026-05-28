@@ -1,0 +1,100 @@
+.city-hero {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1.5rem;
+  color: #fff;
+  background: linear-gradient(135deg, #105f79, #1e8f7a);
+}
+
+.city-hero p,
+.city-hero h1 {
+  margin: 0;
+}
+
+.city-hero p {
+  opacity: 0.86;
+}
+
+.city-hero h1 {
+  margin-top: 0.2rem;
+  font-size: 2rem;
+  font-weight: 760;
+}
+
+.content {
+  padding: 1rem;
+}
+
+.state {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1rem;
+}
+
+ion-card {
+  margin: 0 0 1rem;
+  border-radius: 8px;
+  box-shadow: 0 10px 26px rgba(20, 38, 48, 0.08);
+}
+
+.current-card ion-card-title,
+.current-card ion-card-subtitle {
+  color: #000;
+}
+
+.metric-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.6rem;
+}
+
+.metric-grid div {
+  padding: 0.75rem;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.62);
+}
+
+.metric-grid span,
+.metric-grid strong,
+.hour-values span {
+  display: block;
+}
+
+.metric-grid span {
+  font-size: 0.78rem;
+  color: #000;
+}
+
+.hour-values span {
+  font-size: 0.78rem;
+  color: var(--ion-color-medium);
+}
+
+.metric-grid strong {
+  margin-top: 0.15rem;
+  color: #000;
+}
+
+.hour-values {
+  display: grid;
+  justify-items: end;
+  gap: 0.2rem;
+  min-width: 8.8rem;
+}
+
+.error {
+  color: var(--ion-color-danger);
+}
+
+@media (max-width: 560px) {
+  .city-hero {
+    display: block;
+  }
+
+  .city-hero ion-badge {
+    margin-top: 1rem;
+  }
+}

@@ -1,0 +1,101 @@
+.hero {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1.5rem;
+  color: #fff;
+  background: linear-gradient(135deg, #105f79, #1e8f7a);
+}
+
+.hero p,
+.hero h1 {
+  margin: 0;
+}
+
+.hero p,
+.hero span {
+  opacity: 0.86;
+}
+
+.hero h1 {
+  margin: 0.2rem 0;
+  font-size: 2rem;
+  font-weight: 760;
+}
+
+.content {
+  padding: 1rem;
+}
+
+ion-list {
+  display: grid;
+  gap: 0.85rem;
+  background: transparent;
+}
+
+.city-card {
+  margin: 0;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-radius: 8px;
+  box-shadow: 0 10px 26px rgba(20, 38, 48, 0.08);
+}
+
+ion-item {
+  --background: transparent;
+  --padding-start: 0;
+  --inner-padding-end: 0;
+}
+
+ion-label h2 {
+  color: #000;
+  font-size: 1.2rem;
+  font-weight: 720;
+}
+
+ion-label p {
+  color: #000;
+}
+
+.weather-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.6rem;
+  margin: 1rem 0;
+}
+
+.weather-grid div {
+  padding: 0.75rem;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.62);
+}
+
+.weather-grid span,
+.weather-grid strong {
+  display: block;
+}
+
+.weather-grid span {
+  font-size: 0.78rem;
+  color: #000;
+}
+
+.weather-grid strong {
+  margin-top: 0.15rem;
+  color: #000;
+}
+
+.error {
+  margin: 0.75rem 0 0;
+  color: var(--ion-color-danger);
+}
+
+@media (max-width: 560px) {
+  .hero {
+    display: block;
+  }
+
+  .hero ion-button {
+    margin-top: 1rem;
+  }
+}

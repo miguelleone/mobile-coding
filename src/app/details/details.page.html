@@ -1,0 +1,85 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/home"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Details</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  @if (city) {
+    <section class="city-hero">
+      <div>
+        <p>{{ city.region }}</p>
+        <h1>{{ city.name }}</h1>
+      </div>
+      <ion-badge color="dark">
+        {{ city.latitude }}, {{ city.longitude }}
+      </ion-badge>
+    </section>
+  }
+
+  <section class="content">
+    @if (loading) {
+      <div class="state">
+        <ion-spinner name="crescent"></ion-spinner>
+        <span>Carregando previsao...</span>
+      </div>
+    } @else if (error) {
+      <ion-card>
+        <ion-card-content>
+          <p class="error">{{ error }}</p>
+          <ion-button routerLink="/home">Voltar para Home</ion-button>
+        </ion-card-content>
+      </ion-card>
+    } @else if (current) {
+      <ion-card class="current-card" [appCartaoClima]="current.temperature">
+        <ion-card-header>
+          <ion-card-subtitle>Agora</ion-card-subtitle>
+          <ion-card-title>{{ current.temperature | weatherUnit }}</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+          <div class="metric-grid">
+            <div>
+              <span>Vento</span>
+              <strong>{{ current.windspeed | weatherUnit: 'wind' }}</strong>
+            </div>
+            <div>
+              <span>Direcao</span>
+              <strong>{{ current.winddirection | weatherUnit: 'degrees' }}</strong>
+            </div>
+            <div>
+              <span>Data</span>
+              <strong>{{ current.time | date: 'dd/MM HH:mm' }}</strong>
+            </div>
+          </div>
+        </ion-card-content>
+      </ion-card>
+
+      <ion-card>
+        <ion-card-header>
+          <ion-card-subtitle>Proximas horas</ion-card-subtitle>
+          <ion-card-title>Previsao detalhada</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+          <ion-list lines="full">
+            @for (hour of forecast; track hour.time) {
+              <ion-item>
+                <ion-label>
+                  <h2>{{ hour.time | date: 'HH:mm' }}</h2>
+                  <p>{{ hour.time | date: 'dd/MM/yyyy' }}</p>
+                </ion-label>
+                <div class="hour-values" slot="end">
+                  <ion-badge color="dark">{{ hour.temperature | weatherUnit }}</ion-badge>
+                  <span>Umidade {{ hour.humidity }}%</span>
+                  <span>{{ hour.windspeed | weatherUnit: 'wind' }}</span>
+                </div>
+              </ion-item>
+            }
+          </ion-list>
+        </ion-card-content>
+      </ion-card>
+    }
+  </section>
+</ion-content>
