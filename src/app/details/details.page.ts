@@ -122,7 +122,7 @@ export class DetailsPage implements OnInit {
     const humidities = hourly['relativehumidity_2m'] ?? [];
     const windspeeds = hourly['windspeed_10m'] ?? [];
 
-    return times.slice(0, 12).map((time, index) => ({
+    return times.slice(0, 24).map((time, index) => ({
       time,
       temperature: this.toNumber(temperatures[index]),
       humidity: this.toNumber(humidities[index]),
