@@ -9,7 +9,7 @@ export interface City {
 export const CITIES: City[] = [
   {
     id: 'brasilia',
-    name: 'Brasilia',
+    name: 'Brasília',
     region: 'DF, Brasil',
     latitude: -15.7939,
     longitude: -47.8828,
@@ -24,14 +24,14 @@ export const CITIES: City[] = [
   {
     id: 'bangkok',
     name: 'Bangkok',
-    region: 'Tailandia',
+    region: 'Tailândia',
     latitude: 13.7563,
     longitude: 100.5018,
   },
   {
     id: 'reykjavik',
     name: 'Reykjavik',
-    region: 'Islandia',
+    region: 'Islândia',
     latitude: 64.1466,
     longitude: -21.9426,
   },

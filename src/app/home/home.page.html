@@ -8,7 +8,7 @@
   <section class="hero">
     <div>
       <p>Monitoramento Open-Meteo</p>
-      <h1>Previsao atual</h1>
+      <h1>Previsão atual</h1>
       <span>Atualizado: {{ updatedAt | date: 'dd/MM/yyyy HH:mm' }}</span>
     </div>
     <ion-button fill="solid" color="light" (click)="loadWeather()" [disabled]="loading">
@@ -43,7 +43,7 @@
                   <strong>{{ item.weather.windspeed | weatherUnit: 'wind' }}</strong>
                 </div>
                 <div>
-                  <span>Direcao</span>
+                  <span>Direção</span>
                   <strong>{{ item.weather.winddirection | weatherUnit: 'degrees' }}</strong>
                 </div>
                 <div>

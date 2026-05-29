@@ -24,7 +24,7 @@
     @if (loading) {
       <div class="state">
         <ion-spinner name="crescent"></ion-spinner>
-        <span>Carregando previsao...</span>
+        <span>Carregando previsão...</span>
       </div>
     } @else if (error) {
       <ion-card>
@@ -46,7 +46,7 @@
               <strong>{{ current.windspeed | weatherUnit: 'wind' }}</strong>
             </div>
             <div>
-              <span>Direcao</span>
+              <span>Direção</span>
               <strong>{{ current.winddirection | weatherUnit: 'degrees' }}</strong>
             </div>
             <div>
@@ -59,8 +59,8 @@
 
       <ion-card>
         <ion-card-header>
-          <ion-card-subtitle>Proximas horas</ion-card-subtitle>
-          <ion-card-title>Previsao detalhada</ion-card-title>
+          <ion-card-subtitle>Próximas horas</ion-card-subtitle>
+          <ion-card-title>Previsão detalhada</ion-card-title>
         </ion-card-header>
         <ion-card-content>
           <ion-list lines="full">

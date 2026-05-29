@@ -77,7 +77,7 @@ export class HomePage implements OnInit {
   private loadCityWeather(city: City) {
     return this.openMeteo.getCurrentWeather(city.latitude, city.longitude).pipe(
       map((weather): CityWeather => ({ city, weather, loading: false })),
-      catchError(() => of({ city, loading: false, error: 'Clima indisponivel no momento.' }))
+      catchError(() => of({ city, loading: false, error: 'Clima indisponível no momento.' }))
     );
   }
 }

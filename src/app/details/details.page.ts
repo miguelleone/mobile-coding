@@ -78,7 +78,7 @@ export class DetailsPage implements OnInit {
 
     if (!city) {
       this.loading = false;
-      this.error = 'Cidade nao encontrada.';
+      this.error = 'Cidade não encontrada.';
       return;
     }
 
@@ -104,7 +104,7 @@ export class DetailsPage implements OnInit {
         this.loading = false;
       },
       error: () => {
-        this.error = 'Nao foi possivel carregar a previsao detalhada.';
+        this.error = 'Não foi possível carregar a previsão detalhada.';
         this.loading = false;
       },
     });
